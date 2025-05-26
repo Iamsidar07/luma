@@ -1,10 +1,8 @@
 "use client";
 
 import { useInviteStore } from "@/hooks/useInviteStore";
-import DateTimeInput from "./DateTimeInput";
 import { useState } from "react";
-import { Edit, Notebook, Pen, User, UserRoundMinus } from "lucide-react";
-import Image from "next/image";
+import { Notebook, User, UserRoundMinus } from "lucide-react";
 import { Label } from "./ui/label";
 import { Switch } from "./ui/switch";
 import { MaxCapacityDialog } from "./CapacityDialog";
