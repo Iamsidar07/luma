@@ -2,7 +2,7 @@
 
 Hi, My name is Manoj Kumar
 
-APP URL: [](htt)
+APP URL: [https://luma-hazel.vercel.app/](https://luma-hazel.vercel.app/)
 
 ## Techstack
 - Nextjs
