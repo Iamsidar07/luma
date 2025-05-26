@@ -7,13 +7,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription,
-} from "@/components/ui/dialog";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Switch } from "@/components/ui/switch";
-import { Button } from "@/components/ui/button";
+} from "../components/ui/dialog";
+import { Label } from "../components/ui/label";
+import { Input } from "../components/ui/input";
+import { Switch } from "../components/ui/switch";
+import { Button } from "../components/ui/button";
 import { Pen, UserPlus } from "lucide-react";
-import { useInviteStore } from "@/hooks/useInviteStore";
+import { useInviteStore } from "../hooks/useInviteStore";
 import { useState } from "react";
 
 export function MaxCapacityDialog() {

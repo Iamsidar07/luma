@@ -1,9 +1,10 @@
 "use client";
-import { useInviteStore } from "@/hooks/useInviteStore";
+import { useInviteStore } from "../hooks/useInviteStore";
 import { format } from "date-fns";
 import { ArrowLeft, MapPin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import themeImage from "../assets/theme_image.png"
 
 const EventInvite = ({ event }: { event: any }) => {
   const startDate = new Date(event.start_datetime);
@@ -12,7 +13,7 @@ const EventInvite = ({ event }: { event: any }) => {
   const { form } = useInviteStore();
 
   return (
-    <div className="min-h-screen sm:p-6 font-sans relative">
+    <div className="min-h-screen h-full sm:p-6 font-sans relative">
       <div className="absolute inset-0 -z-10 opacity-20 backdrop-blur-lg">
         {form.theme ? (
           form.theme.type === "video" ? (
@@ -26,7 +27,7 @@ const EventInvite = ({ event }: { event: any }) => {
           ) : (
             <Image
               src={form.theme.url}
-              alt="theme preview"
+              alt="a preview"
               width={800}
               height={800}
               className="object-cover w-full h-full"
@@ -34,7 +35,7 @@ const EventInvite = ({ event }: { event: any }) => {
           )
         ) : (
           <Image
-            src={"/theme_image.png"}
+            src={themeImage}
             alt="theme"
             className="object-cover w-full h-full"
             width={800}
@@ -42,7 +43,7 @@ const EventInvite = ({ event }: { event: any }) => {
           />
         )}
       </div>
-      .
+      
       <div className="max-w-5xl mx-auto bg-opacity-10 rounded-xl p-6">
         <Link href={"/create"}>
           <button className="bg-opacity-light hover:bg-opacity-second-light cursor-pointer px-5 py-2 mb-6 rounded-lg flex items-center gap-2">

@@ -1,5 +1,5 @@
-import CreateEventForm from "@/components/CreateEventForm";
-import ThemeSelector from "@/components/ThemeSelector";
+import CreateEventForm from "../../components/CreateEventForm";
+import ThemeSelector from "../../components/ThemeSelector";
 import { Eye } from "lucide-react";
 import Link from "next/link";
 

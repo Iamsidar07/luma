@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { format } from "date-fns";
-import { InviteForm } from "@/types";
+import { InviteForm } from "../types";
 
 type InviteStore = {
   form: InviteForm;

@@ -6,7 +6,9 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "remotion": "remotion studio src/remotion/index.ts",
+    "render": "remotion render  EventPreview"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.14",
@@ -15,6 +17,12 @@
     "@radix-ui/react-separator": "^1.1.7",
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-switch": "^1.2.5",
+    "@remotion/bundler": "4.0.306",
+    "@remotion/cli": "4.0.306",
+    "@remotion/google-fonts": "4.0.306",
+    "@remotion/lambda": "4.0.306",
+    "@remotion/renderer": "4.0.306",
+    "@remotion/tailwind-v4": "4.0.306",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
@@ -23,6 +31,7 @@
     "react": "^19.0.0",
     "react-day-picker": "8.10.1",
     "react-dom": "^19.0.0",
+    "remotion": "4.0.306",
     "tailwind-merge": "^3.3.0",
     "zustand": "^5.0.5"
   },

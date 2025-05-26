@@ -1,6 +1,6 @@
 "use client";
 
-import { useInviteStore } from "@/hooks/useInviteStore";
+import { useInviteStore } from "../hooks/useInviteStore";
 import { useState } from "react";
 import { Notebook, User, UserRoundMinus } from "lucide-react";
 import { Label } from "./ui/label";
@@ -9,9 +9,9 @@ import { MaxCapacityDialog } from "./CapacityDialog";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { format } from "date-fns";
 
-import { Calendar } from "@/components/ui/calendar";
-import { getAllTimeSlots, getCurrentTimeSlot } from "@/lib/date";
-import { cn } from "@/lib/utils";
+import { Calendar } from "../components/ui/calendar";
+import { getAllTimeSlots, getCurrentTimeSlot } from "../lib/date";
+import { cn } from "../lib/utils";
 
 const CreateEventForm = () => {
   const ALL_AVAILABLE_TIME_SLOT = getAllTimeSlots();

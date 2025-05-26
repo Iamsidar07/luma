@@ -1,5 +1,5 @@
-import EventInvite from "@/components/EventInvite";
-import response from "@/response.json";
+import EventInvite from "../../components/EventInvite";
+import response from "../../response.json";
 async function getEventDetails() {
   return response;
 }

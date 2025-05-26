@@ -1,10 +1,10 @@
 "use client";
 
-import { useInviteStore } from "@/hooks/useInviteStore";
+import { useInviteStore } from "../hooks/useInviteStore";
 import Image from "next/image";
 import { ImageIcon } from "lucide-react";
 import { ChangeEvent } from "react";
-import { fileToBase64 } from "@/lib/utils";
+import { fileToBase64 } from "../lib/utils";
 
 const ThemeSelector = () => {
   const { updateField, form } = useInviteStore();
