@@ -1,9 +1,7 @@
 import EventInvite from "../../components/EventInvite";
-import response from "../../response.json";
-async function getEventDetails() {
-  return response;
-}
+import { fetchEventDetails } from "../../lib/event";
+
 export default async function ViewEventPage() {
-  const event = await getEventDetails();
+  const event = await fetchEventDetails();
   return <EventInvite event={event} />;
 }
