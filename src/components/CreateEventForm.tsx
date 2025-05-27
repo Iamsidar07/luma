@@ -18,7 +18,6 @@ const CreateEventForm = () => {
   const currentTimeSlot = getCurrentTimeSlot();
   const { updateField, form } = useInviteStore();
   const [selectedTimeSlot, setSelectedTimeSlot] = useState(currentTimeSlot);
-  console.log(form);
 
   return (
     <div className="flex flex-col gap-3 w-full">

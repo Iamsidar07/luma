@@ -1,8 +1,13 @@
+export type Theme = {
+  title: string;
+  thumbnail: string
+  url?: string;
+  color?: string;
+  type?: "video" | "image"
+}
 export type InviteForm = {
-  theme: {
-    url: string;
-    type: 'image' | 'video'
-  } | null;
+  theme: Theme;
+  coverImage: string;
   eventName: string;
   startDate: string;
   description: string;

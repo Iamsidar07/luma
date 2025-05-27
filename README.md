@@ -12,8 +12,7 @@ APP URL: [https://luma-hazel.vercel.app/](https://luma-hazel.vercel.app/)
 - Zustand
 - Remotion
 
-## Note: Remotion video export
-I was able to build the video but to export the video I have to use remotion lambda in nextjs there is no any other options and requires billing and as of now I do not have
+
 ![Remotion Preview](/public/image.png)
 
 ## Setup for development

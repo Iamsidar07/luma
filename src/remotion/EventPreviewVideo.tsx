@@ -1,3 +1,4 @@
+'use client'
 import { loadFont, fontFamily } from "@remotion/google-fonts/Geist";
 import eventDetail from "../response.json";
 import EventInvite from "../components/EventInvite";

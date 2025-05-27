@@ -1,3 +1,4 @@
+'use client'
 import { Composition } from "remotion";
 import EventPreviewVideo from "./EventPreviewVideo";
 
@@ -7,7 +8,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="EventPreview"
         component={EventPreviewVideo}
-        durationInFrames={300}
+        durationInFrames={150}
         fps={30}
         width={1920}
         height={1080}

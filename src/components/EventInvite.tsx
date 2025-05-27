@@ -2,9 +2,7 @@
 import { useInviteStore } from "../hooks/useInviteStore";
 import { format } from "date-fns";
 import { ArrowLeft, MapPin } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
-import themeImage from "../assets/theme_image.png"
 
 const EventInvite = ({ event }: { event: any }) => {
   const startDate = new Date(event.start_datetime);
@@ -13,37 +11,32 @@ const EventInvite = ({ event }: { event: any }) => {
   const { form } = useInviteStore();
 
   return (
-    <div className="min-h-screen h-full sm:p-6 font-sans relative">
+    <div
+      className="min-h-screen h-full sm:p-6 font-sans relative"
+      style={{
+        backgroundColor: form.theme.color ?? undefined,
+      }}
+    >
       <div className="absolute inset-0 -z-10 opacity-20 backdrop-blur-lg">
-        {form.theme ? (
-          form.theme.type === "video" ? (
-            <video
-              src={form.theme.url}
-              autoPlay
-              muted
-              loop
-              className="w-full h-full object-cover"
-            />
-          ) : (
-            <Image
-              src={form.theme.url}
-              alt="a preview"
-              width={800}
-              height={800}
-              className="object-cover w-full h-full"
-            />
-          )
-        ) : (
-          <Image
-            src={themeImage}
-            alt="theme"
-            className="object-cover w-full h-full"
+        {form.theme?.type === "video" && form.theme.url ? (
+          <video
+            src={form.theme.url}
+            autoPlay
+            muted
+            loop
+            className="w-full h-full object-cover"
+          />
+        ) : form.theme.type === "image" ? (
+          <img
+            src={form.theme.url as string}
+            alt="a preview"
             width={800}
             height={800}
+            className="object-cover w-full h-full"
           />
-        )}
+        ) : null}
       </div>
-      
+
       <div className="max-w-5xl mx-auto bg-opacity-10 rounded-xl p-6">
         <Link href={"/create"}>
           <button className="bg-opacity-light hover:bg-opacity-second-light cursor-pointer px-5 py-2 mb-6 rounded-lg flex items-center gap-2">
@@ -54,33 +47,13 @@ const EventInvite = ({ event }: { event: any }) => {
         <div className="flex flex-col md:flex-row gap-6">
           <div className="w-full md:w-fit">
             <div className="aspect-square h-[330px] overflow-hidden rounded-lg bg-white relative">
-              {form.theme ? (
-                form.theme.type === "video" ? (
-                  <video
-                    src={form.theme.url}
-                    autoPlay
-                    muted
-                    loop
-                    className="absolute w-full h-full object-cover"
-                  />
-                ) : (
-                  <Image
-                    src={form.theme.url}
-                    alt="theme preview"
-                    width={800}
-                    height={800}
-                    className="aspect-square object-cover w-full h-full"
-                  />
-                )
-              ) : (
-                <Image
-                  src={"/theme_image.png"}
-                  alt="theme"
-                  className="aspect-square object-cover w-full h-full"
-                  width={800}
-                  height={800}
-                />
-              )}
+              <img
+                src={form.coverImage}
+                alt="theme"
+                className="aspect-square object-cover w-full h-full"
+                width={800}
+                height={800}
+              />
             </div>
             <div className="mt-2 text-sm text-secondary-color-alpha">
               Presented by

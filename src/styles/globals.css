@@ -44,6 +44,7 @@
   --opacity-second-light: rgba(255, 255, 255, 0.16);
   --secondary-color-alpha: rgba(255, 255, 255, 0.79);
   --opacity-16: rgba(0, 17, 61, 0.16);
+  --tertiary-color-alpha: rgba(255, 255, 255, 0.5);
 }
 
 @theme inline {
@@ -51,6 +52,7 @@
   --color-opacity-light: var(--color-opacity-light);
   --color-opacity-second-light: var(--color-opacity-second-light);
   --color-secondary-color-alpha: var(--color-secondary-color-alpha);
+  --color-tertiary-color-alpha: var(--color-tertiary-color-alpha);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
