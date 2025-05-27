@@ -4,7 +4,6 @@ import ThemeSelector from "../../components/ThemeSelector";
 import { Eye } from "lucide-react";
 import Link from "next/link";
 import { useInviteStore } from "../../hooks/useInviteStore";
-import DownloadVideoButton from "../../components/DownloadVideoButton";
 
 export default function CreateEventPage() {
   const { form } = useInviteStore();
@@ -46,8 +45,6 @@ export default function CreateEventPage() {
                 <span>Preview</span>
               </button>
             </Link>
-
-          <DownloadVideoButton/>
           </div>
         </div>
       </div>
